@@ -1,0 +1,103 @@
+.createPost{
+    color: var(--color-white);
+
+    &-container{        
+        &-img{
+            @include square(70px);
+            background-color: var(--color-gray-light);
+            border-radius: 50%;
+        }
+    }
+    &-module{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        width: 98%;
+        margin: auto ;
+        padding: 3px;
+        border: 1px solid var(--color-ic-bd);
+        border-radius: var(--border-radius-small);
+    }
+    &-inPutText{
+        width: 100%;
+        height: 20%;
+        outline: none;
+        border-color: var(--color-ic-bd);
+        border-radius: var(--border-radius-small);
+        background-color: transparent;
+        color: var(--color-white);
+        padding: 5px;
+        resize: vertical;
+        &:focus{
+            border: 1px solid black;
+        }
+    }
+    &-settings{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 15px;
+        
+    }
+    &-toolBar{
+        @include flex-center;
+        gap: 7px;
+        & button{
+            color: var(--color-ic-bd);
+            border: none;
+            
+            background-color: transparent;
+            @include square (30px);
+            border-radius:25%;
+            &:hover{
+                background-color: var(--color-ping-hover);
+                color: var(--color-white);
+            }
+            &:active{
+                background-color: var(--color-pink-activ);
+            }
+        }
+
+    }
+    &-char-left{
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &-btn-post{
+        justify-items: end;
+        border: 3px solid var(--color-pink-activ);
+        background-color: transparent;
+        box-shadow: none;
+        color: var(--color-white);
+    }
+
+}
+.upLoadImg{
+    &-input{
+        display: none;
+    }
+    &-img:hover{
+        transform: scale(1.5);
+    }
+}
+.loadedImgs{
+    width: 100%;
+    padding: 3px;
+    display: flex;
+    gap: 3px;
+    justify-content: flex-start;
+    align-items: center;
+    &-loadedImgsItem{
+        width: 60px;
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

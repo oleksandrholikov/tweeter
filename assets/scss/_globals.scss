@@ -1,0 +1,137 @@
+body {
+    font-size: 18px;
+    font-family: var(--font-family-base);
+    font-weight: 400;    
+    line-height: 1.28;
+    color: var(--color-white);
+    background-color: var(--color-pink-light);
+}
+
+a, 
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h1, h2, h3, h4 {
+    font-weight: 500;        
+}
+
+h1, .h1{
+    font-size: calc(30px + 4vw);
+    font-family: 'Pixelify Sans';
+    text-shadow: var(--color-dark) 0 4px 4px;
+
+}
+
+h2, .h2 {
+    font-size: calc(20px + 2vw);
+    text-shadow: var(--color-dark) 0 4px 5px;
+    margin-bottom: 10px;
+}
+
+h3, .h3 {
+    font-size: calc(10px + 0.8vw);
+}
+
+h4, .h4 {
+    font-size: calc(10px + 0.5vw);
+}
+.button{
+    height: var(--button-height);
+    border: var(--border);
+    border-radius: var(--border-radius-mid);
+    box-shadow: var(--shadow);
+    padding: 11px 20px;
+    min-width: 205px;
+    &:not(:last-child){
+        margin-right: 40px;
+    }
+    &:hover{
+        background-color: var(--color-ping-hover);
+        border-color: var();
+        color: var(--color-white);
+        cursor: pointer;
+
+    }
+    &:focus,&:active{
+        background-color: var(--color-pink-activ);
+    }
+}
+a, .link{
+    &:hover{
+        font-weight: 900;
+        color: var(--color-ic-bd);
+        cursor: pointer;
+    }
+}
+.underline{
+    text-decoration: underline;
+}
+input, .input{
+    height: var(--input-height);
+    border-radius: var(--border-radius-mid);
+    padding: 5px 20px;
+    max-width: var(--input-max-width);
+    background-color: var(--color-gray-light);
+    color: var(--color-dark);
+    &::placeholder{
+        color: var(--color-gray-dark);
+    }
+    &:not(:last-child){
+        margin-bottom: 20px
+    }
+    &:focus, &:active{
+        outline: none;
+        border:2px solid green;
+    }
+    &-invalid{
+        border:3px solid red;
+    }
+}
+.container{
+    @include abs-center;
+    width: var(--container-width);
+    padding-bottom: 50px;
+}
+.color-light{
+    color: var(--color-ic-bd);
+}
+.block-icon{
+    width: 65px;
+    aspect-ratio: 1;
+    border-radius: var(--border-50);
+    
+    &>img{
+        width: 100%;
+        height: 100%;
+        border-radius: var(--border-50);
+        object-fit: cover;
+    }
+}
+/*-----Hidden-actic block and background-----*/
+.background-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-pink-light);
+    display: none;
+    z-index: 5;
+}
+.display{
+    &-hidden{
+        display: none;    
+    }
+    &-action{
+        display: flex;
+        z-index: 10;
+    }
+}

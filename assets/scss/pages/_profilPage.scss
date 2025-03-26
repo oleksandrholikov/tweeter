@@ -1,0 +1,147 @@
+.ProfilPage {
+    background-color: var(--color-main-bg);
+    height: 100vh;
+    display: flex;
+}
+
+.profil {    
+    position: relative;
+    width: 70%;
+    height: 96vh;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    flex: 1 1 auto;
+
+    &-back{
+        background-color: var(--color-ping-hover);
+        min-height: 10rem;
+        flex-shrink: 0;
+        width: 100%;
+        // position: absolute;
+        z-index: 1;
+    }
+    // &-group{
+        
+    //     width: 100%;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+        
+    // }
+    &-photo{
+        // position: absolute;
+        z-index: 2;
+        width: 25%;
+        aspect-ratio: 1;
+        margin-top: -12%;
+        margin-left: 5%;
+        // border: var(--border-50);
+    }
+    &-info{
+        padding: 1.5rem;
+        // position: absolute;
+        z-index: 3;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--color-ic-bd);
+        &-body{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;;
+        }
+    }
+    &-join-date{
+        font-size: calc(10px + 0.2vw);
+        color: var(--color-gray-light);
+    }
+    &-follow-group{
+        @include flex-center;
+        gap: 2rem;
+    }
+    &-btn-edit{
+        margin-top: -15%;
+    }
+    &-posts{
+        &-container{
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            height: 98%;
+            // overflow: hidden;
+        }
+        &-resalt{
+            min-height: 10rem;
+            &-item{
+                flex-direction: column;
+                gap: 0.4rem;
+                padding-inline:0.4rem;
+                min-height: 10rem;
+                // overflow: scroll;
+            }
+        }
+    }
+    &-nav{
+        width: 100%;
+        border-bottom: 1px solid var(--color-ic-bd);
+        &-list{
+            @include flex-center;
+            justify-content: space-around;
+        }
+        &-item{
+            padding: 0.4rem;            
+        }
+
+    }
+    &-bg{
+        opacity: 0.5;
+    }
+    &-edit{
+        &-block{
+            @include abs-center;
+            width: 45%;
+            background-color: var(--color-pink-light);
+            padding: 0.5rem;
+            border: 3px solid var(--color-ic-bd);
+            border-radius: var(--border-radius-mid);
+            overflow-y: scroll;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+            &-exit{
+                border-radius: var(--border-50);
+                width: 1.9rem;
+                aspect-ratio: 1;
+                align-self: flex-end;
+                &:hover {
+                    background-color: var(--color-ping-hover);
+                    border-color: var();
+                    color: var(--color-white);
+                    cursor: pointer;
+                }
+            }            
+        }
+        &-form{
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            &>div{                
+                display: flex;
+                flex-direction: column;
+                gap: 0.2rem;
+                align-items: center;
+                justify-content: center;
+            }
+            &>button{
+                align-self: self-end;
+            }
+
+        }    
+    }    
+}
+

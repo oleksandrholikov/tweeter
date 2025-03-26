@@ -1,0 +1,49 @@
+/*----Hidden Blok for SingUp----*/
+.block{
+    @include abs-center;
+    position: fixed;
+    width: 600px;
+    height: 300px;
+    &-userName, &-photo,&-bio{
+        // display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background-color: var(--color-white);
+        padding: var(--padding-form);
+        border-radius:0 var(--border-radius-large) ;
+    }
+    &-photo{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+    }
+    &-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    &-title{
+        color: var(--color-dark);
+    }
+}
+.userName-info{
+    color:var(--color-dark);
+    text-align: center;
+    opacity: 0.7;
+
+}
+.lable-add-photo{
+    color: var(--color-dark);
+    border:3px dashed var(--color-pink-dark);
+    @include square(80%);
+    @include flex-center(true);
+    border-radius: var(--border-radius-mid);   
+    &:hover{
+        background-color: var(--color-ping-hover);
+    }
+}

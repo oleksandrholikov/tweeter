@@ -1,0 +1,18 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    
+    background-color: transparent;
+    color: var(--color-white);
+    align-items: center;
+    justify-content: center;
+    & span{
+        padding-inline:20px ;
+        @include flex-center;
+    }
+    & span:not(:last-child){        border-right: 1px solid var(--color-ic-bd);
+        
+    }
+}

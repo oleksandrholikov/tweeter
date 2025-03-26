@@ -1,0 +1,46 @@
+:root{
+    /*color*/
+    // --color-pink-light:#C92667;
+    // --color-pink-dark:#941e4d;
+    // --color-ping-hover:#E0154F;
+    // --color-pink-activ:#d21a4f;
+    // --color-main-bg:#500F29;
+    // --color-white: #FFFFFF;
+    // --color-dark:#000000;
+    // --color-gray-light: #E1E1E1;
+    // --color-gray-dark:#808080;
+    // --color-gray:#b2b2b2;
+    // --color-ic-bd: #B99FA9;
+    // --color-bg-post:#3d0e21c7;
+
+
+
+    /*border-shadow*/
+    --border: 1px solid transparent;
+    --border-hover: 1px solid var(--color-pink-dark);
+    --border-radius: 14px;
+    --border-radius-small: 7px;
+    --border-radius-mid: 20px;
+    --border-radius-large: 30px;
+    --border-50:50%;
+
+    --shadow: 0 2px 4px 0 var(--color-gray);
+
+
+    --font-family-base:'KoPub Batang', sans-serif;
+
+    /*width-padding-basics*/
+    --container-width:80%;
+    --container-padding-x:100px;
+    --padding-form: 45px;
+    --section-padding-y:0;
+
+    /*input-button*/
+
+    --input-height: 45px;
+    --input-max-width:325px;
+    --button-height: 43px;
+
+    /*animation*/
+    --transition-duration: 0.2s;
+};
